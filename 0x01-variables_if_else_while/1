@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+/**
+ *main - Entry Point
+ *
+ *Return:0
+*/
+
+int main(void)
+{
+        int a;
+        int b;
+        int c;
+	int d;
+
+        a = '0';
+        while (a <= '9')
+        {
+                c = a;
+                while (c <= '9')
+                {
+                        b = a + 1;
+                        while (b <= '9')
+                        {
+				d = c + 1;
+				while (d <= '9')
+				{
+                                putchar(a);
+                                putchar(b);
+				putchar(' ');
+                                putchar(c);
+				putchar(d);
+                                if (a != '9' && b != 8)
+                                {
+                                        putchar(',');
+                                        putchar(' ');
+                                }
+				d++;
+				}
+                                b++;
+                        }
+                        c++;
+                }
+                a++;
+        }
+        putchar('\n');
+        return (0);
+}
