@@ -15,14 +15,16 @@ int main(void)
 	a = 0;
 	b = 1;
 	k = 2;
-	while (k < 100)
-        {
-                tmp = b;
-                printf("%lu", b);
-                if (k != 99)
-                        printf(", ");
-                k++;
-        }
+	while (k < 99)
+	{
+		tmp = b;
+		b = a + b;
+		a = tmp;
+		printf("%lu", b);
+		if (k != 98)
+			printf(", ");
+		k++;
+	}
 	printf("\n");
 	return (0);
 }
