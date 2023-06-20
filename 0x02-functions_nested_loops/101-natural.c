@@ -15,7 +15,7 @@ int main(void)
 	i = 1;
 	while (i < 1024)
 	{
-		if ((i % 3) || (i % 5))
+		if ((i % 3 != 0) || (i % 5 != 0))
 			ret = ret + i;
 		i++;
 	}
