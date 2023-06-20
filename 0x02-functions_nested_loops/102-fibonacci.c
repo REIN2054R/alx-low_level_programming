@@ -10,10 +10,10 @@
 
 void	fibo(long i, long j, long k)
 {
-	if (k == 51)
+	if (k == 50)
 		return;
 	printf("%ld", j);
-	if (k != 50)
+	if (k != 49)
 		printf(", ");
 	fibo(j, i + j, k + 1);
 }
