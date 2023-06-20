@@ -24,7 +24,7 @@ int print_last_digit(int c)
 {
 	int a;
 
-	if (c == INT_MAX )
+	if (c == INT_MIN)
 		a = 88;
 	else
 		a = _abss(c);
