@@ -15,7 +15,14 @@ int main(void)
 	a = 0;
 	b = 1;
 	k = 2;
-	tmp = a;
+	while (k < 100)
+        {
+                tmp = b;
+                printf("%lu", b);
+                if (k != 99)
+                        printf(", ");
+                k++;
+        }
 	printf("\n");
 	return (0);
 }
