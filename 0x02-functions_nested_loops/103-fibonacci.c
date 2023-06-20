@@ -9,7 +9,10 @@ int main(void)
 {
 	int k;
 
-	ret =
-
+	k = 0;
+	ret = ft_fibo();
+	while (k < 2)
+		k++;
+	printf ("%d", k);
 	return(0);
 }
