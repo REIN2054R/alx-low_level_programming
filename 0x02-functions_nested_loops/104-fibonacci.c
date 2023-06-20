@@ -3,8 +3,8 @@
 
 /**
  *get_len - get lengh
- *
- *Retrn: thte actual lengh
+ *@num: num to len
+ *Return: thte actual lengh
 */
 
 int get_len(unsigned long num)
@@ -29,29 +29,22 @@ int get_len(unsigned long num)
 
 int main(void)
 {
-	int c;
-	int z;
-	unsigned long f1;
-	unsigned long f2;
-	unsigned long sum1;
-	unsigned long MAX;
-	unsigned long d1;
-	unsigned long d2;
-	unsigned long sum2;
+	int c = 1;
+	int z = 0;
+	unsigned long f1 = 1;
+	unsigned long f2 = 2;
+	unsigned long sum1 = 0;
+	unsigned long MAX = 1000000000;
+	unsigned long d1 = 0;
+	unsigned long d2 = 0;
+	unsigned long sum2 = 0;
 
-	f1 = 1;
-	f2 = 2;
-	MAX= 1000000000;
-	d1 = 0;
-	d2 = 0;
-	sum2 = 0;
-	c = 1;
-	while(c <= 98)
+	while (c <= 98)
 	{
 		if (d1 > 0)
-		       printf("%lu", d1);
+			printf("%lu", d1);
 		z = get_len(MAX) - 1 - get_len(f1);
-		while(d1 > 0 && z > 0)
+		while (d1 > 0 && z > 0)
 		{
 			printf("%d", 0);
 			z--;
