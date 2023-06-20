@@ -15,7 +15,6 @@ int main(void)
 	a = 0;
 	b = 1;
 	k = 2;
-	printf(", ");
 	while (k < 98)
 	{
 		tmp = b;
