@@ -24,7 +24,10 @@ int print_last_digit(int c)
 {
 	int a;
 
-	a = _abss(c);
+	if (c == INT_MAX )
+		a = 88;
+	else
+		a = _abss(c);
 	_putchar((a % 10) + '0');
 	return (a % 10);
 }
