@@ -35,4 +35,5 @@ int main(void)
 	printf("%ld, %ld, ", i, j);
 	fibo(j, i + j, k);
 	printf("\n");
+	return (0);
 }
