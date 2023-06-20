@@ -15,13 +15,13 @@ int main(void)
 	a = 0;
 	b = 1;
 	k = 2;
-	while (k < 98)
+	while (k < 99)
 	{
 		tmp = b;
 		b = a + b;
 		a = tmp;
 		printf("%lu", b);
-		if (k != 97)
+		if (k != 98)
 			printf(", ");
 		k++;
 	}
