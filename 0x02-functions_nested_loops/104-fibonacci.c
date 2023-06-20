@@ -50,7 +50,7 @@ int main(void)
 	{
 		if (d1 > 0)
 		       printf("%lu", d1);
-		z = get_len(MAX) - 1 - get_len(d1);
+		z = get_len(MAX) - 1 - get_len(f1);
 		while(d1 > 0 && z > 0)
 		{
 			printf("%d", 0);
