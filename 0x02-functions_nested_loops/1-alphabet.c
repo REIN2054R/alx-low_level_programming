@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- *main - Starrting point
+ *print_alphabet - Starrting point
  *
  *Return: Nothing , void
 */
-
 void print_alphabet(void)
 {
 	int a;
