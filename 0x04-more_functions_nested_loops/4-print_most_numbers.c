@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  *print_most_numbers - no 4 and 2
@@ -16,4 +16,5 @@ void	print_most_numbers(void)
 			_putchar(i);
 		i++;
 	}
+	_putchar('\n');
 }
