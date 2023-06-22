@@ -25,13 +25,15 @@ void	print_slides(int n)
 void	print_number(int n)
 {
 	unsigned int BN;
+
 	if (n < 0)
 	{
 		_putchar('-');
 		BN = -n;
-		print_slides(BN);
 	}
 	else
-		print_slides(n);
-
+		BN = n;
+	if (BN / 10)
+		print_number(BN / 10);
+	_putchar((BN % 10) + 48);
 }
