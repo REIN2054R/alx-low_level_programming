@@ -24,20 +24,12 @@ void	print_slides(int n)
 
 void	print_number(int n)
 {
-	if (n == 0)
-	{
-		_putchar(48);
-	}
+	unsigned int BN;
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n == -2147483648)
-		{
-			print_slides(214748364);
-			_putchar(8 + 48);
-		}
-		else
-			print_slides(-n);
+		BN = -n;
+		print_slides(BN);
 	}
 	else
 		print_slides(n);
