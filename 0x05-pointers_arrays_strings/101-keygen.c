@@ -15,7 +15,7 @@ int main(void)
 	{
 		c = rand() % 128;
 		ret += c;
-		write(1, &c, 1);
+		putchar(c);
 	}
 	putchar(2772 - ret);
 	return (0);
