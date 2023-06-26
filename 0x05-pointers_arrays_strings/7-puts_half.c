@@ -20,11 +20,8 @@ void	puts_half(char *str)
 	}
 	while (str[i])
 		i++;
-	if ((i % 2) != 0)
-		n = (i - 1) / 2;
-	else
-		n = 2;
-	n += 2;
+	i++;
+	n = i / 2;
 	while (str[n])
 	{
 		write(1, &str[n], 1);
