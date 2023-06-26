@@ -10,8 +10,11 @@
 void rev_string(char *s)
 {
 	int i;
+	int j;
+	char tmp;
 
 	i = 0;
+	j = 0;
 	if (!s)
 	{
 		write(1, "\n", 1);
@@ -20,9 +23,12 @@ void rev_string(char *s)
 	while (s[i])
 		i++;
 	i--;
-	while (i >= 0)
+	while (j <= i)
 	{
-		write(1, &s[i], 1);
+		tmp = str[i];
+		str[i] = str[j];
+		str[j] = tmp;
 		i--;
+		j++;
 	}
 }
