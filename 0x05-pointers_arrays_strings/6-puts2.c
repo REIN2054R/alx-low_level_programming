@@ -9,9 +9,13 @@
 void puts2(char *str)
 {
 	int i;
+	int j;
 
+	j = 0;
 	i = 0;
-	while (str[i])
+	while (str[j])
+		j++;
+	while (str[i] && i < j)
 	{
 		printf("%c", str[i]);
 		i = i + 2;
