@@ -17,7 +17,7 @@ void print_rev(char *s)
 	i--;
 	while (i >= 0)
 	{
-		printf("%c", s[i]);
+		write(1 ,&s[i], 1);
 		i--;
 	}
 	write(1, "\n", 1);
