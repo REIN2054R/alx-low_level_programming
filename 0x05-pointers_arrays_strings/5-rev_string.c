@@ -1,10 +1,10 @@
 #include "main.h"
 
-/***
+/**
  *rev_string - return printed string
  *
  *@s: the s to print
- *Return: nada
+ *return: nada
 */
 
 void rev_string(char *s)
@@ -27,7 +27,7 @@ void rev_string(char *s)
 	while (i >= 0)
 	{
 		write(1, &s[i], 1);
-		i++;
+		i--;
 	}
 	write(1, "\n", 1);
 }
