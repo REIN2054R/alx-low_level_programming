@@ -3,7 +3,7 @@
  *print_array - print and array of int
  *
  *@a: the arra
- *n: his size
+ *@n: his size
  *return: nothing
 */
 
