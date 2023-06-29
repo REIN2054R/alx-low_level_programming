@@ -8,13 +8,11 @@
 
 int is_not(int c)
 {
-	if (c <= '9' && c >= '0')
-		return (0);
-	if (c >= 'a' && c <= 'z')
-		return (0);
-	if (c >= 'A' && c <= 'Z')
-		return (0);
-	return (1);
+	if (c == ' ' || c == '\t' || c == '\n' || c == ',' || c == ';'
+	|| c == '.' || c == '!' || c == '?' || c == '"'
+	|| c == '(' || c == ')' || c == '{' || c == '}')
+		return (1);
+	return (0);
 }
 
 /**
