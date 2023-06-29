@@ -20,4 +20,5 @@ char *leet(char *str)
 				str[i] = s2[j];
 		}
 	}
+	return (str);
 }
