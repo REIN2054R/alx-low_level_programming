@@ -23,6 +23,11 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		j++;
 	}
+	while(i < n - 1)
+	{
+		dest[i] = 0;
+		i++;
+	}
 	dest[i] = 0;
 	return (dest);
 }
