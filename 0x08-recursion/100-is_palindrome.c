@@ -1,5 +1,18 @@
 #include "main.h"
 
+
+/**
+ *_strlen_recursion - recu strlen
+ *@s: the string that we want to get he s size
+ *Return: int , a size
+*/
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
+}
+
 /**
  *pali_ilap - check if it;s paliilap
  *@s: the string to look in
@@ -25,14 +38,8 @@ int pali_ilap(char *s, int i, int j)
 
 int is_palindrome(char *s)
 {
-	int i;
-
-	i = 0;
 	if (!s)
 		return (0);
-	while (s[i])
-		i++;
-	i--;
-	return (pali_ilap(s, i, 0));
+	return (pali_ilap(s, _strlen_recursion(s) - 1, 0));
 
 }
