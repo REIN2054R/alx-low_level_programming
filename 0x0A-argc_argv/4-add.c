@@ -37,7 +37,7 @@ int main(int ac, char **av)
 	while (i < ac)
 	{
 		if (!check_av(av[i]))
-			return((void)printf("Error\n"),0);
+			return ((void)printf("Error\n"), 0);
 		res += atoi(av[i]);
 		i++;
 
