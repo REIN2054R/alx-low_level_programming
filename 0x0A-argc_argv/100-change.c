@@ -34,6 +34,11 @@ int main(int ac, char **av)
 			ret += (input / 5);
 			input %= 5;
 		}
+		if (input / 2)
+		{
+			ret += (input / 2);
+			input %= 2;
+		}
 		ret += input;
 		printf("%d\n", ret);
 	}
