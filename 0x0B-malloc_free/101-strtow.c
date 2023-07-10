@@ -59,6 +59,8 @@ char **strtow(char *str)
 	if (!str || str[0] == 0)
 		return (NULL);
 	count = words_nbr(str);
+	if (count <= 0)
+		return (NULL);
 	new = (char **)malloc(sizeof(char *) * count + 1);
 	if (!new)
 		return (NULL);
