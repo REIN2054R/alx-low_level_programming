@@ -1,6 +1,43 @@
 #include "main.h"
 
 /**
+ *_strdup - duplicate a string
+ *@str: the str to duplicate
+ *Return: a new allocated string
+*/
+
+char *_strdup(char *str)
+{
+	int i;
+	char *new;
+	
+	i = 0;
+	if (!str)
+		return (NULL);
+	while (str[i])
+		i++;
+	if (i == 0)
+	{
+		new = (char *)malloc(1);
+		if (!new)
+                        return (NULL);
+                new[0] = 0;
+                return (new);
+        }
+        new = (char *)malloc(sizeof(char) * (i + 1));
+        if (!new)
+                return (NULL);
+        i = 0;
+        while (str[i])
+        {
+                new[i] = str[i];
+                i++;
+        }
+        new[i] = 0;
+        return (new);
+}
+
+/**
  *str_concat - concat 2 string
  *@s1: the first string
  *@s2: the second string
@@ -15,10 +52,8 @@ char *str_concat(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1)
-		s1[0] = 0;
-	if (!s2)
-		s2[0] = 0;
+	s1 = _strdup(s1);
+	s2 = _strdup(s2);
 	while (s1[i])
 		i++;
 	while (s2[j])
@@ -40,5 +75,7 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 	new[i] = 0;
+	free(s1);
+	free(s2);
 	return (new);
 }
