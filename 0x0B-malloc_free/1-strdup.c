@@ -1,5 +1,7 @@
 #include "main.h"
 
+
+
 /**
  *_strdup - duplicate a string
  *@str: the str to duplicate
@@ -21,7 +23,7 @@ char *_strdup(char *str)
 		new = (char *)malloc(1);
 		if (!new)
 			return (NULL);
-		str[0] = 0;
+		new[0] = 0;
 		return (str);
 	}
 	new = (char *)malloc(sizeof(char) * (i + 1));
