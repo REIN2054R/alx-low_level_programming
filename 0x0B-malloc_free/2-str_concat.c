@@ -10,7 +10,7 @@ char *_strdup(char *str)
 {
 	int i;
 	char *new;
-	
+
 	i = 0;
 	if (!str)
 		return (NULL);
@@ -20,21 +20,21 @@ char *_strdup(char *str)
 	{
 		new = (char *)malloc(1);
 		if (!new)
-                        return (NULL);
-                new[0] = 0;
-                return (new);
-        }
-        new = (char *)malloc(sizeof(char) * (i + 1));
-        if (!new)
-                return (NULL);
-        i = 0;
-        while (str[i])
-        {
-                new[i] = str[i];
-                i++;
-        }
-        new[i] = 0;
-        return (new);
+			return (NULL);
+		new[0] = 0;
+		return (new);
+	}
+	new = (char *)malloc(sizeof(char) * (i + 1));
+	if (!new)
+		return (NULL);
+	i = 0;
+	while (str[i])
+	{
+		new[i] = str[i];
+		i++;
+	}
+	new[i] = 0;
+	return (new);
 }
 
 /**
