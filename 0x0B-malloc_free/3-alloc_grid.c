@@ -7,7 +7,7 @@
  *Return: pointer to a 2d array of int
 */
 
-int **allco_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int **a;
 	int i;
@@ -19,13 +19,13 @@ int **allco_grid(int width, int height)
 	if (!a)
 		return (NULL);
 	i = 0;
-	while (i < width)
+	while (i < height)
 	{
 		j = 0;
 		a[i] = (int *)malloc(sizeof(int) * width);
 		if (!a[i])
 			return (NULL);
-		while (j <= width)
+		while (j < width)
 		{
 			a[i][j] = 0;
 			j++;
