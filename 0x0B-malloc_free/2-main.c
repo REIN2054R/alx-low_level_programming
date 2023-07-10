@@ -11,12 +11,7 @@ int main(void)
 {
     char *s;
 
-    s = str_concat("", "");
-    if (s == NULL)
-    {
-        printf("failed\n");
-        return (1);
-    }
+    s = str_concat(NULL, NULL);
     printf("%s\n", s);
     free(s);
     return (0);
