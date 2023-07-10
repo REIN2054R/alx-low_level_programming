@@ -62,8 +62,6 @@ char **strtow(char *str)
 	if (count <= 0)
 		return (NULL);
 	new = (char **)malloc(sizeof(char *) * count + 1);
-	if (!new)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (str[i])
@@ -76,7 +74,7 @@ char **strtow(char *str)
 			count = i;
 			while (str[i] && str[i] != ' ')
 				i++;
-			new[j] = (char *)malloc(sizeof(char) * (i - count + 1));
+			new[j] = (char *)malloc(sizeof(char) * (i - count));
 				if (!new[j])
 					delete_all(new, j);
 			while (str[count] && str[count] != ' ')
