@@ -27,10 +27,6 @@ int	opti_atoi(char *str)
 	{
 		result = (result * 10) + str[i] - '0';
 		i++;
-		if (result > INT_MAX && signe == 1)
-			return ((void)_puts("Error\n"), exit(98), -1);
-		if (result > 2147483648 && signe == -1)
-			return ((void)_puts("Error\n"), exit(98), -1);
 	}
 	return (result * signe);
 }
