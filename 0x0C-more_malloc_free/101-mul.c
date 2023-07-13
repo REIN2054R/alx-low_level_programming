@@ -50,11 +50,11 @@ void	printf_r(unsigned long int num)
 	while (div >= 1)
 	{
 		pt = num / div;
-		putchar('0' + pt);
+		_putchar('0' + pt);
 		num %= div;
 		div /= 10;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 
 /**
@@ -70,7 +70,7 @@ void _puts(char *str)
 	i = 0;
 	while (str[i])
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
 }
