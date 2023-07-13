@@ -11,13 +11,13 @@ void	_puts(char *str);
 int	opti_atoi(char *str)
 {
 	int i;
-	long result;
+	unsigned long int result;
 	int signe;
 
 	i = 0;
 	result = 0;
 	signe = 1;
-	while (((str[i] == '-') || (str[i] == '+')) && str[i])
+	while ((str[i] == '-') && str[i])
 	{
 		if (str[i] == '-')
 			signe *= -1;
@@ -32,8 +32,6 @@ int	opti_atoi(char *str)
 		if (result > 2147483648 && signe == -1)
 			return ((void)_puts("Error\n"), exit(98), -1);
 	}
-	if (str[i])
-		return ((void)_puts("Error\n"), exit(98), -1);
 	return (result * signe);
 }
 
@@ -42,9 +40,9 @@ int	opti_atoi(char *str)
  *@num: num to print
  *Return: NADA
 */
-void	printf_r(unsigned long num)
+void	printf_r(unsigned long int num)
 {
-	unsigned long div = 1;
+	unsigned long int div = 1;
 	int pt;
 
 	while (num / div > 9)
@@ -72,7 +70,7 @@ void _puts(char *str)
 	i = 0;
 	while (str[i])
 	{
-		putchar(str[i]);
+		_putchar(str[i]);
 		i++;
 	}
 }
@@ -91,14 +89,7 @@ int main(int ac, char **av)
 
 	if (ac == 3)
 	{
-		num1 = opti_atoi(av[1]);
-		num2 = opti_atoi(av[2]);
-		if ((num1 < 0 && num2 > 0) || (num1 > 0 && num2 < 0))
-		{
-			num1 = -num1;
-			putchar('-');
-		}
-		printf_r(num1 * num2);
+		printf_r(opti_atoi(av[1]) * opti_atoi(av[2]));
 	}
 	else
 	{
