@@ -15,8 +15,6 @@ int	opti_atoi(char *str)
 	i = 0;
 	result = 0;
 	signe = 1;
-	while ((str[i] == ' ' || str[i] == '\t') && str[i])
-		i++;
 	while (((str[i] == '-') || (str[i] == '+')) && str[i])
 	{
 		if (str[i] == '-')
