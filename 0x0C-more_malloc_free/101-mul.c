@@ -1,5 +1,7 @@
 #include "main.h"
 
+void	_puts(char *str);
+
 /**
  *opti_atoi - in this version it return error if ti find an alpha
  *@str: the str to change
@@ -10,7 +12,7 @@ int	opti_atoi(char *str)
 {
 	int i;
 	long result;
-	long signe;
+	int signe;
 
 	i = 0;
 	result = 0;
@@ -26,13 +28,53 @@ int	opti_atoi(char *str)
 		result = (result * 10) + str[i] - '0';
 		i++;
 		if (result > INT_MAX && signe == 1)
-			return ((void)printf("Error\n"), exit(98), -1);
+			return ((void)_puts("Error\n"), exit(98), -1);
 		if (result > 2147483648 && signe == -1)
-			return ((void)printf("Error\n"), exit(98), -1);
+			return ((void)_puts("Error\n"), exit(98), -1);
 	}
 	if (str[i])
-		return ((void)printf("Error\n"), exit(98), -1);
+		return ((void)_puts("Error\n"), exit(98), -1);
 	return (result * signe);
+}
+
+/**
+ *printf_r - something to print , maybe printf isn;t allowed
+ *@num: num to print
+ *Return: NADA
+*/
+void	printf_r(unsigned long num)
+{
+	unsigned long div = 1;
+	int pt;
+
+	while (num / div > 9)
+		div *= 10;
+	while (div >= 1)
+	{
+		pt = num / div;
+		putchar('0' + pt);
+		num %= div;
+		div /= 10;
+	}
+	putchar('\n');
+}
+
+/**
+ *_puts - print str
+ *@str: the str
+ *Return: no return
+*/
+
+void _puts(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		putchar(str[i]);
+		i++;
+	}
 }
 
 /**
@@ -44,18 +86,23 @@ int	opti_atoi(char *str)
 
 int main(int ac, char **av)
 {
-	int num1;
-	int num2;
+	long num1;
+	long num2;
 
-	if (ac == 2)
+	if (ac == 3)
 	{
 		num1 = opti_atoi(av[1]);
 		num2 = opti_atoi(av[2]);
-		return (printf("%d\n", num1 * num2));
+		if ((num1 < 0 && num2 > 0) || (num1 > 0 && num2 < 0))
+		{
+			num1 = -num1;
+			putchar('-');
+		}
+		printf_r(num1 * num2);
 	}
 	else
 	{
-		printf("Error\n");
+		_puts("Error\n");
 		exit(98);
 	}
 	return (0);
