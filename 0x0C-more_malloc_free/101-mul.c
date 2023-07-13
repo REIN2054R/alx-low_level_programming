@@ -70,7 +70,7 @@ void _puts(char *str)
 	i = 0;
 	while (str[i])
 	{
-		_putchar(str[i]);
+		putchar(str[i]);
 		i++;
 	}
 }
@@ -84,9 +84,6 @@ void _puts(char *str)
 
 int main(int ac, char **av)
 {
-	long num1;
-	long num2;
-
 	if (ac == 3)
 	{
 		printf_r(opti_atoi(av[1]) * opti_atoi(av[2]));
