@@ -88,9 +88,9 @@ int main(int ac, char **av)
 
 	if (ac == 3)
 	{
-		if (av[1] == "" || av[2] == "")
+		if (av[1][0] == 0 || av[2][0] == 0)
 		{
-			pritnf("Error\n");
+			printf("Error\n");
 			exit(98);
 		}
 		while (av[i])
