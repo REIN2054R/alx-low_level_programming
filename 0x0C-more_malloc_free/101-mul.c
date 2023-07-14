@@ -88,6 +88,11 @@ int main(int ac, char **av)
 
 	if (ac == 3)
 	{
+		if (av[1] == "" || av[2] == "")
+		{
+			pritnf("Error\n");
+			exit(98);
+		}
 		while (av[i])
 		{
 			j = 0;
