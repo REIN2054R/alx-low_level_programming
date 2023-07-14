@@ -80,9 +80,27 @@ void _puts(char *str)
 
 int main(int ac, char **av)
 {
+	int i = 1, j = 0;
+	unsigned long n;
+
 	if (ac == 3)
 	{
-		printf_r(opti_atoi(av[1]) * opti_atoi(av[2]));
+		while (av[i])
+		{
+			j = 0;
+			while (av[i][j])
+			{
+				if (av[i][j] > 57 || av[i][j] < 48)
+				{
+					printf("Error\n");
+					exit(98);
+				}
+				j++;
+			}
+			i++;
+		}
+		n = atol(av[1]) * atol(av[2]);
+		printf("%lu\n", n);
 	}
 	else
 	{
