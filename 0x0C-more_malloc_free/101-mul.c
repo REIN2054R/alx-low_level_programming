@@ -83,14 +83,16 @@ void _puts(char *str)
 
 int main(int ac, char **av)
 {
-	int i = 1, j = 0;
-	unsigned long n;
+	int i = 1, j = 0, signe = 1;
+	long int n;
 
 	if (ac == 3)
 	{
 		while (av[i])
 		{
 			j = 0;
+			while (av[i][j] == '-' && av[i][j])
+				j++;
 			while (av[i][j])
 			{
 				if (av[i][j] > 57 || av[i][j] < 48)
@@ -102,8 +104,10 @@ int main(int ac, char **av)
 			}
 			i++;
 		}
+		if (signe == -1)
+			printf("-");
 		n = atol(av[1]) * atol(av[2]);
-		printf("%lu\n", n);
+		printf("%ld\n", n);
 	}
 	else
 	{
