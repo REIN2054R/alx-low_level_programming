@@ -104,7 +104,7 @@ int main(int ac, char **av)
 	}
 	else
 	{
-		_puts("Error\n");
+		printf("Error\n");
 		exit(98);
 	}
 	return (0);
