@@ -3,12 +3,11 @@
 /**
  *print_dog - print data of a dog
  *@d : dog data struct
- *Return: no return
 */
 
 void print_dog(struct dog *d)
 {
-	if (!d)
+	if (!d == NULL)
 		return;
 	if (d->name)
 		printf("Name: %s\n", d->name);
