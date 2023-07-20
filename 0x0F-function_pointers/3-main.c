@@ -20,9 +20,6 @@ int main(int ac, char **av)
 		a = atoi(av[1]);
 		b = atoi(av[3]);
 
-		if (av[2][0] != '/' && av[2][0] != '+' && av[2][0] != '-'
-			&& av[2][0] != '*' && av[2][0] != '%')
-			return ((void)printf("Error\n"), 99);
 		fct = get_op_func(av[2]);
 		if (!fct)
 			return ((void)printf("Error\n"), 99);
