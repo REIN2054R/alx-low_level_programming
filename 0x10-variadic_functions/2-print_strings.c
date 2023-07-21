@@ -20,11 +20,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (!separator && str)
 			printf("%s", str);
 		else if (separator && !str && i == 0)
-			printf("nil");
+			printf("(nil)");
 		else if (separator && str && i == 0)
 			printf("%s", str);
 		else if (separator && !str)
-			printf("%snil", separator);
+			printf("%s(nil)", separator);
 		else
 			printf("%s%s", separator, str);
 		i++;
